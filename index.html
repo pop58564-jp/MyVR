@@ -1,32 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8">
+  <title>Cyberpunk City VR</title>
+  <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+</head>
 
-    <title>My VR World</title>
+<body>
+  <a-scene>
 
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-  </head>
+    <!-- 3Dモデルの読み込み -->
+    <a-assets>
+      <a-asset-item
+        id="city"
+        src="models/cyberpunk_city.glb">
+      </a-asset-item>
+    </a-assets>
 
-  <body>
-    <a-scene background="color: #87CEEB">
-      <!-- 床 -->
-      <a-plane position="0 0 0" rotation="-90 0 0" width="30" height="30" color="#7BC8A4"> </a-plane>
+    <!-- 街の配置 -->
+    <a-entity
+      gltf-model="#city"
+      position="0 0 -5"
+      scale="1 1 1">
+    </a-entity>
 
-      <!-- 建物 -->
-      <a-box position="0 2 -5" width="4" height="4" depth="4" color="#FFFFFF"> </a-box>
+    <!-- カメラ -->
+    <a-camera position="0 2 5"></a-camera>
 
-      <!-- 木 -->
-      <a-cylinder position="-4 1 -4" radius="0.3" height="2" color="#8B4513"> </a-cylinder>
+    <!-- 背景 -->
+    <a-sky color="#080818"></a-sky>
 
-      <a-sphere position="-4 2.5 -4" radius="1" color="#228B22"> </a-sphere>
-
-      <!-- 太陽 -->
-      <a-sphere position="5 8 -10" radius="1.5" color="#FFD700"> </a-sphere>
-
-      <!-- カメラ -->
-      <a-entity position="0 1.6 5" camera look-controls wasd-controls> </a-entity>
-    </a-scene>
-  </body>
+  </a-scene>
+</body>
 </html>
