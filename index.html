@@ -7,9 +7,16 @@
 </head>
 
 <body>
-  <a-scene>
+  <a-scene background="color: #87CEEB">
 
-    <!-- 3Dモデルの読み込み -->
+    <!-- 明るさ調整 -->
+    <a-light type="ambient" color="#FFFFFF" intensity="2"></a-light>
+    <a-light type="directional"
+             position="0 10 5"
+             color="#FFFFFF"
+             intensity="2"></a-light>
+
+    <!-- 3Dモデル -->
     <a-assets>
       <a-asset-item
         id="classroom"
@@ -17,7 +24,6 @@
       </a-asset-item>
     </a-assets>
 
-    <!-- 教室の配置 -->
     <a-entity
       gltf-model="#classroom"
       position="0 0 -5"
@@ -26,9 +32,6 @@
 
     <!-- カメラ -->
     <a-camera position="0 2 5"></a-camera>
-
-    <!-- 背景 -->
-    <a-sky color="#87CEEB"></a-sky>
 
   </a-scene>
 </body>
