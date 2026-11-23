@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>Cyberpunk City VR</title>
+  <title>anime_class_room VR</title>
   <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
 </head>
 
@@ -12,14 +12,14 @@
     <!-- 3Dモデルの読み込み -->
     <a-assets>
       <a-asset-item
-        id="city"
-        src="models/cyberpunk_city.glb">
+        id="classroom"
+        src="models/anime_class_room.glb">
       </a-asset-item>
     </a-assets>
 
-    <!-- 街の配置 -->
+    <!-- 教室の配置 -->
     <a-entity
-      gltf-model="#city"
+      gltf-model="#classroom"
       position="0 0 -5"
       scale="1 1 1">
     </a-entity>
@@ -28,7 +28,7 @@
     <a-camera position="0 2 5"></a-camera>
 
     <!-- 背景 -->
-    <a-sky color="#080818"></a-sky>
+    <a-sky color="#87CEEB"></a-sky>
 
   </a-scene>
 </body>
